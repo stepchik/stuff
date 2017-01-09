@@ -17,7 +17,7 @@ $stmt = $connection->prepare($sql);
 $stmt->execute();
 
 function f(PDOStatement $stmt) {
-    while ($row = $stmt->fetch(PDO::FETCH_OBJ)) {
+    while ($stmt->columnCount() && $row = $stmt->fetch(PDO::FETCH_OBJ)) {
         yield $row;
         $stmt->nextRowset();
     }
