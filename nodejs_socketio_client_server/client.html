@@ -1,0 +1,8 @@
+<script src="node_modules/socket.io-client/dist/socket.io.js"></script>
+<script>
+  var socket = io('http://localhost');
+  socket.on('news', function (data) {
+    console.log(data);
+    socket.emit('my other event', { my: 'WE SEND TEEEEST' });
+  });
+</script>

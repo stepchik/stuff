@@ -1,0 +1,9 @@
+{
+  "name": "Node socket connect sample",
+  "version": "0.0.1",
+  "description": "First socket.io app",
+  "dependencies": {
+    "socket.io": "^1.7.2",
+    "socket.io-client": "^1.7.2"
+  }
+}
